@@ -32,18 +32,15 @@ def main(args):
     # run
     ilpname = '%s/heuristic.lp' % (ROOTDIR,opts.name,opts.type)
     outprefix = '%s/heuristic' % (ROOTDIR,opts.name,opts.type)
-    #pkl.dump(node_dict,open('node_dict.pkl','wb'))
-    node_dict = pkl.load(open('node_dict.pkl','rb'))
 
     if opts.heuristic:
 
-        taildistancelist,H2,P = tail_path_heuristic(H,source,target,node_dict=node_dict)
+        taildistancelist,H2,P = tail_path_heuristic(H,source,target)
         pkl.dump(taildistancelist,open('taildistancelist.pkl','wb'))
 
     if opts.enumeration:
-        node_dict = pkl.load(open('node_dict.pkl','rb'))
-        taildistancelist,H2,P = tail_path_heuristic(H,source,target,node_dict=node_dict)
-        p,bestp,bestweight = enumerateallpaths(H2,P,source,target,node_dict=node_dict)
+        taildistancelist,H2,P = tail_path_heuristic(H,source,target)
+        p,bestp,bestweight = enumerateallpaths(H2,P,source,target)
         print('enumeration results')
         print(p)
         print(bestp)
