@@ -6,8 +6,6 @@ Once you have converted the OWL file from Reactome or Pathway Commons, you shoul
 
 To run the hyperpath heuristic and hyperpath generation algorithm, only python is required, as well as halp, which can be installed via pip.
 
-For the cutting-planes algorithm, the LP solver CPLEX is required, which can be installed through https://www.ibm.com/support/knowledgecenter/SSSA5P_12.7.1/ilog.odms.cplex.help/CPLEX/GettingStarted/topics/set_up/Python_setup.html
-
 ## Installation
 
 To install, you must create a folder in the directory called parsed/ and then set ROOTDIR in run.py to be the current directory. It is in this parsed/ directory where your hypernodes.txt and hyperedges.txt files should go.
