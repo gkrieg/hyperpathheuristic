@@ -25,7 +25,7 @@ def main(args):
     '''
     opts = parseOptions(args)
 
-    H,_,__ = make_hypergraph(ROOTDIR+'/parsed/{}'.format(opts.name))
+    H,_,__ = make_hypergraph(ROOTDIR+'/parsedhypergraphs/{}'.format(opts.name))
     H_sources,H_targets,H_high_penalty_sources,H_name_dict = getSourcesTargets(opts.name,H,'hypergraph',opts.source,opts.target)
     source,target = add_super_nodes(H,H_sources,H_targets,H_high_penalty_sources,opts.name)
 
