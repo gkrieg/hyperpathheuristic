@@ -26,6 +26,21 @@ The hyperpath enumeration algorithm can be run with the following command
  python run.py --enumeration --source <source> --target <target> --name <prefix of hypernodes.txt and hyperedges.txt file> 
 ```
 
+## Datasets
+
+Parsed versions of the hypergraphs built off of NCI-PID and Reactome datasets are available in parsedhypergraphs. These hypergraphs can be searched from run.py. We built hypergraphs using three subsets of NCI-PID pathways, and call these the Small (WNT5A), Medium (WNT), and Large(allpid) datasets. The Small dataset is a small Wnt signaling pathway consisting of the union of two pathways: “degradation of β-catenin” and “canonical Wnt signaling”. The Medium dataset is a larger Wnt signaling pathway including four additional pathways: “noncanonical Wnt signaling”, “Wnt signaling network”, “regulation of nuclear β-catenin”, and “presenilin action in Notch and Wnt signaling”, which correspond to non-canonical branches of Wnt signaling. The Large dataset contains all NCI-PID pathways. Similarly, the Reactome dataset is the union of all Reactome pathways. The NCI-PID and Reactome pathways were downloaded in the BioPAX format from Pathway Commons and processed using a parser referenced above.
+
+## Results
+
+The results directory contains two files which summarize the instances from the datasets where our heuristic returns a cyclic hyperpath. Each file contains instances in the form of:
+
+<pre>
+line with target id
+line with cyclic vertex id
+description of path:
+    one line for each edge, giving the screen name from Pathway Commons of each vertex in the tail then head of the hyperege
+</pre>
+
 Currently under construction...
 
 
