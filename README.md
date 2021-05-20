@@ -1,12 +1,10 @@
 # hyperpaths
 ## Prerequisites
 
-The code for constructing directed hypergraph objects (required for the hyperpath heuristic, cut finding procedure, and cutting planes algorithm) is available at https://github.com/annaritz/pathway-connectivity.
+The code for constructing directed hypergraph objects (required for the hyperpath heuristic and pathway enumeration algorithm) is available at https://github.com/annaritz/pathway-connectivity.
 Once you have converted the OWL file from Reactome or Pathway Commons, you should have a -hypernodes.txt file and a -hyperedges.txt file, which will be read in by run.py to construct the directed hyperpath object.
 
 To run the hyperpath heuristic and hyperpath generation algorithm, only python is required, as well as halp, which can be installed via pip.
-
-For the cutting-planes algorithm, the LP solver CPLEX is required, which can be installed through https://www.ibm.com/support/knowledgecenter/SSSA5P_12.7.1/ilog.odms.cplex.help/CPLEX/GettingStarted/topics/set_up/Python_setup.html
 
 ## Installation
 

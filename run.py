@@ -21,7 +21,7 @@ ROOTDIR = ''
 
 def main(args):
     '''
-    Makes the hypergraph object, runs the hyperpath heuristic, cutfinder and cutting planes approach
+    Makes the hypergraph object, runs the hyperpath heuristic,
     '''
     opts = parseOptions(args)
 
@@ -67,7 +67,6 @@ def parseOptions(args):
     parser.add_option('','--name',type='string',default='WNT5A',help='Name of dataset (WNT5A, CTNNB1, WNT, or ALL). Default=WNT5A.')
     parser.add_option('','--source',type='string',action='append',help='Sources. Default = WNT5A')
     parser.add_option('','--target',type='string',action='append',help='Targets. Default = CTNNB1')
-    parser.add_option('','--taildistancelist',type='string',action='append',help='taildistance list needed for the cutting planes algorithm')
 
     opts,args = parser.parse_args()
 
